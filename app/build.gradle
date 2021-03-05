@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'maven'
 }
 
 android {
@@ -45,7 +46,15 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
-    testImplementation 'junit:junit:4.+'
+
+    // Охренеть. Когда было вот так 's.yarlykov.lib.smartadapter:1.1.2', то не работало !!!
+    // То есть нужно разделять package-name модуля и имя пакета внутри него двоеточием !!!
+    // И ещё добавил плагин 'maven'. ХЗ нужно это или нет ))
+    //
+    // Точнее так - нужно разделять двоеточием groupId и artifactId
+    implementation 's.yarlykov.lib:smartadapter:1.1.2'
+
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
