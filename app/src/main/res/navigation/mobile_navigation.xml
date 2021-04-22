@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="s.yarlykov.izinavigation.ui.home.HomeFragment"
+        android:name="s.yarlykov.izinavigation.ui.fragments.FragmentHome"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="s.yarlykov.izinavigation.ui.dashboard.DashboardFragment"
+        android:name="s.yarlykov.izinavigation.ui.fragments.FragmentDashboard"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="s.yarlykov.izinavigation.ui.notifications.NotificationsFragment"
+        android:name="s.yarlykov.izinavigation.ui.fragments.FragmentNotifications"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
 </navigation>
