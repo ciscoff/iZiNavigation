@@ -1,8 +1,11 @@
 package s.yarlykov.izinavigation.ui.fragments
 
+import android.animation.ObjectAnimator
 import android.content.Context
 import android.os.Bundle
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.RotateAnimation
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -13,6 +16,7 @@ import s.yarlykov.izinavigation.utils.logIt
 import s.yarlykov.lib.smartadapter.adapter.SmartAdapter
 import s.yarlykov.lib.smartadapter.model.SmartList
 import javax.inject.Inject
+import kotlin.random.Random
 
 @ExperimentalCoroutinesApi
 class FragmentHome : Fragment(R.layout.fragment_home) {
