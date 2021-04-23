@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.annotation.DimenRes
 import androidx.recyclerview.widget.RecyclerView
 import s.yarlykov.izinavigation.R
+import s.yarlykov.izinavigation.utils.logIt
 import s.yarlykov.izinavigation.utils.min
 import kotlin.math.ceil
 import kotlin.math.min
@@ -18,7 +19,7 @@ import kotlin.math.min
 class CellLayoutManager(
     val context: Context,
     val colSpan: Int,
-    @DimenRes divider: Int = R.dimen.cell_spacer
+    @DimenRes val divider: Int = R.dimen.cell_spacer
 ) : RecyclerView.LayoutManager() {
 
     init {
@@ -81,6 +82,10 @@ class CellLayoutManager(
      */
     private fun fillGrid(recycler: RecyclerView.Recycler) {
 
+        if(spacer == -1){
+            spacer = context.resources.getDimension(divider).toInt()
+        }
+
         var nextItem = 0
         summaryHeight = spacer
 
@@ -125,6 +130,7 @@ class CellLayoutManager(
 
         // Получить декор и установить spacer
         calculateItemDecorationsForChild(child, decorRect)
+
         if (spacer == -1) {
             spacer = decorRect.min
         }

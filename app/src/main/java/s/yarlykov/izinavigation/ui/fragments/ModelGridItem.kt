@@ -2,4 +2,4 @@ package s.yarlykov.izinavigation.ui.fragments
 
 import android.graphics.Bitmap
 
-data class ModelGridItem(val bitmap: Bitmap)
+data class ModelGridItem(val bitmap: Bitmap, var isVisible: Boolean = false)

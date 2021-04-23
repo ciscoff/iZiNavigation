@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import s.yarlykov.izinavigation.R
 import s.yarlykov.izinavigation.ui.ViewModelActivity
 import s.yarlykov.izinavigation.ui.di.ComponentProvider
@@ -13,6 +14,7 @@ import s.yarlykov.lib.smartadapter.adapter.SmartAdapter
 import s.yarlykov.lib.smartadapter.model.SmartList
 import javax.inject.Inject
 
+@ExperimentalCoroutinesApi
 class FragmentHome : Fragment(R.layout.fragment_home) {
 
     companion object {
@@ -48,7 +50,7 @@ class FragmentHome : Fragment(R.layout.fragment_home) {
 
         if (::viewModel.isInitialized) {
 
-            viewModel.localMedia().observe(viewLifecycleOwner) { item ->
+            viewModel.sharedMedia().observe(viewLifecycleOwner) { item ->
                 smartList.apply { addItem(item, itemController) }.also(smartAdapter::updateModel)
             }
         }

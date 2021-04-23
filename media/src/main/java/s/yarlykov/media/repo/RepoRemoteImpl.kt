@@ -10,6 +10,7 @@ import kotlinx.coroutines.delay
 import s.yarlykov.media.utils.drawableToBitmap
 import javax.inject.Inject
 import javax.inject.Named
+import kotlin.random.Random
 
 class RepoRemoteImpl constructor(
     private val context: Context,
@@ -21,8 +22,8 @@ class RepoRemoteImpl constructor(
         return flow {
             drawables.forEach { id ->
                 context.drawableToBitmap(id)?.let { bmp ->
+//                    delay(Random.nextLong(5000, 8000))
                     emit(bmp)
-                    delay(1000)
                 }
             }
         }

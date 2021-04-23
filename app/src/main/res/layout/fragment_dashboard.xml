@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize"
+    android:paddingBottom="?attr/actionBarSize"
     tools:context=".ui.fragments.FragmentDashboard">
 
     <TextView
@@ -19,4 +21,63 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pb1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="0dp"
+        android:indeterminate="false"
+        android:progress="5"
+        android:progressDrawable="@drawable/drawable_pb_1" />
+
+    <ProgressBar
+        android:id="@+id/pb2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="0dp"
+        android:indeterminate="false"
+        android:progress="5"
+        android:progressDrawable="@drawable/drawable_pb_2" />
+
+    <ProgressBar
+        android:id="@+id/pb3"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="0dp"
+        android:indeterminate="false"
+        android:progress="5"
+        android:progressDrawable="@drawable/drawable_pb_3" />
+
+    <ProgressBar
+        android:id="@+id/pb4"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="match_parent"
+        android:indeterminate="false"
+        android:progress="5"
+        android:progressDrawable="@drawable/drawable_pb_4" />
+
+    <ProgressBar
+        android:id="@+id/pb5"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="match_parent"
+        android:indeterminate="false"
+        android:progress="5"
+        android:progressDrawable="@drawable/drawable_pb_5" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="pb1,pb2,pb3,pb4,pb5"
+        app:flow_wrapMode="none"
+        app:flow_horizontalGap="0dp"
+        app:flow_horizontalStyle="packed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
