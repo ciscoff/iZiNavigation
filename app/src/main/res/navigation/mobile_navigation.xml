@@ -9,17 +9,35 @@
         android:id="@+id/navigation_home"
         android:name="s.yarlykov.izinavigation.ui.fragments.FragmentHome"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <deepLink
+            android:id="@+id/deepLinkHome"
+            app:action="ACTION_VIEW"
+            app:mimeType="text/html"
+            app:uri="sy://main/home" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="s.yarlykov.izinavigation.ui.fragments.FragmentDashboard"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard">
+        <deepLink
+            android:id="@+id/deepLinkDash"
+            app:action="ACTION_VIEW"
+            app:mimeType="text/html"
+            app:uri="sy://main/dash" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="s.yarlykov.izinavigation.ui.fragments.FragmentNotifications"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_notifications">
+        <deepLink
+            android:id="@+id/deepLinkNotify"
+            app:action="ACTION_VIEW"
+            app:mimeType="text/html"
+            app:uri="sy://main/notify" />
+    </fragment>
 </navigation>

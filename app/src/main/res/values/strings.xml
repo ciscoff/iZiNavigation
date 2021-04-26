@@ -4,4 +4,11 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="deep_link_1">Deep Activity</string>
+    <string name="shortcut_disable_message">Dashboard disable</string>
+    <string name="shortcut_long_label">Dashboard long label</string>
+    <string name="shortcut_short_label">Dashboard short label</string>
+    <string name="default_channel">iZiNavigation default channel</string>
+    <string name="notification_description">Notifications from iZiNavigation</string>
+    <string name="deepLink_notification_title">Deep Link</string>
+    <string name="show_more_dashboards">Show more dashboards</string>
 </resources>

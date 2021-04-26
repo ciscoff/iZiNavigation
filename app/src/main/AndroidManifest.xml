@@ -18,13 +18,14 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="*"
+                    android:host="gizmo"
                     android:scheme="sy" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
+            <nav-graph android:value="@navigation/mobile_navigation" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
