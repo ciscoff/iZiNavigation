@@ -3,11 +3,15 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_schedule">Schedule</string>
     <string name="deep_link_1">Deep Activity</string>
     <string name="default_channel">iZiNavigation default channel</string>
     <string name="notification_description">Notifications from iZiNavigation</string>
     <string name="deepLink_notification_title">Deep Link</string>
-    <string name="show_more_dashboards">Show more dashboards</string>
+
+    <string name="see_more_icons">See more icons</string>
+    <string name="see_more_dashboards">See more dashboards</string>
+    <string name="see_more_notify">See more notifications</string>
 
     <!-- Shortcuts -->
     <string name="shortcut_home_disable">Home disable</string>
@@ -21,5 +25,9 @@
     <string name="shortcut_notify_disable">Notify disable</string>
     <string name="shortcut_notify_long_label">Notifications Screen</string>
     <string name="shortcut_notify_short_label">WTF Notifications</string>
+
+    <string name="chip_choice_home">Home</string>
+    <string name="chip_choice_dash">Dashboard</string>
+    <string name="chip_choice_notify">Notification</string>
 
 </resources>

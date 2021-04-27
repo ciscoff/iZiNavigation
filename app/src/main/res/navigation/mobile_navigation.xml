@@ -40,4 +40,19 @@
             app:mimeType="text/html"
             app:uri="sy://main/notify" />
     </fragment>
+
+    <dialog
+        android:id="@+id/navigation_selection_dialog"
+        android:name="s.yarlykov.izinavigation.ui.SelectionDialogFragment"
+        android:label="@string/title_schedule">
+        <deepLink app:uri="izi://selection/{index}" />
+        <argument
+            android:name="index"
+            android:defaultValue="-1L"
+            app:argType="long" />
+    </dialog>
+
+    <action
+        android:id="@+id/action_selection_dialog"
+        app:destination="@id/navigation_selection_dialog" />
 </navigation>

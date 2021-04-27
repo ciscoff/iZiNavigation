@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import s.yarlykov.izinavigation.R
 import s.yarlykov.izinavigation.ui.ViewModelActivity
 import s.yarlykov.izinavigation.ui.di.ComponentProvider
@@ -23,6 +24,7 @@ class FragmentDashboard : Fragment(R.layout.fragment_dashboard) {
     @Inject
     lateinit var viewModel: ViewModelActivity
 
+    @ExperimentalCoroutinesApi
     override fun onAttach(context: Context) {
         super.onAttach(context)
         (requireActivity() as? ComponentProvider)?.component()?.inject(this)

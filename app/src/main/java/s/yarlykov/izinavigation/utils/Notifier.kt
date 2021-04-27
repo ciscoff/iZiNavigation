@@ -39,11 +39,22 @@ class Notifier @Inject constructor(var context: Context) {
         }
     }
 
-    fun postNotification(id: Long, context: Context, intent: PendingIntent) {
+    fun postNotification(id: Int, hint: Int, context: Context, intent: PendingIntent) {
+
+        /**
+         * Выбрать инконку
+         */
+        val drawableId = when(id) {
+            R.id.navigation_home -> R.drawable.ic_home_blue
+            R.id.navigation_dashboard -> R.drawable.ic_dashboard_blue
+            R.id.navigation_notifications -> R.drawable.ic_notifications_blue
+            else -> R.drawable.ic_android
+        }
+
         val builder = NotificationCompat.Builder(context, channelId)
         builder.setContentTitle(context.getString(R.string.deepLink_notification_title))
-            .setSmallIcon(R.drawable.ic_dashboard_blue)
-        val text = context.getString(R.string.show_more_dashboards)
+            .setSmallIcon(drawableId)
+        val text = context.getString(hint)
 
         val notification = builder.setContentText(text)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -54,6 +65,6 @@ class Notifier @Inject constructor(var context: Context) {
 
         // Remove prior notifications; only allow one at a time to edit the latest item
         notificationManager.cancelAll()
-        notificationManager.notify(id.toInt(), notification)
+        notificationManager.notify(id, notification)
     }
 }

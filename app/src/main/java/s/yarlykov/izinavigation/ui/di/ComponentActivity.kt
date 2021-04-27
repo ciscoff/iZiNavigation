@@ -3,6 +3,7 @@ package s.yarlykov.izinavigation.ui.di
 import dagger.Subcomponent
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import s.yarlykov.izinavigation.MainActivity
+import s.yarlykov.izinavigation.ui.SelectionDialogFragment
 import s.yarlykov.izinavigation.ui.fragments.FragmentDashboard
 import s.yarlykov.izinavigation.ui.fragments.FragmentHome
 import s.yarlykov.izinavigation.ui.fragments.FragmentNotifications
@@ -24,6 +25,7 @@ interface ComponentActivity {
     fun inject(consumer: FragmentDashboard)
     fun inject(consumer: FragmentNotifications)
     fun inject(consumer: FragmentHome)
+    fun inject(consumer: SelectionDialogFragment)
 
     val smartAdapter: SmartAdapter
 
