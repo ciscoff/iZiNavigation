@@ -7,10 +7,12 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import s.yarlykov.izinavigation.app.App
 import s.yarlykov.izinavigation.ui.di.ComponentActivity
 import s.yarlykov.izinavigation.ui.di.ComponentProvider
 
+@ExperimentalCoroutinesApi
 class MainActivity : AppCompatActivity(), ComponentProvider {
 
     private lateinit var componentActivity: ComponentActivity

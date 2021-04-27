@@ -2,13 +2,38 @@
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
         android:enabled="true"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:shortcutDisabledMessage="@string/shortcut_disable_message"
+        android:icon="@drawable/ic_home_blue"
+        android:shortcutDisabledMessage="@string/shortcut_home_disable"
+        android:shortcutId="HomeFragment"
+        android:shortcutLongLabel="@string/shortcut_home_long_label"
+        android:shortcutShortLabel="@string/shortcut_home_short_label">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="sy://main/home" />
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_dashboard_blue"
+        android:shortcutDisabledMessage="@string/shortcut_dash_disable"
         android:shortcutId="DashBoardFragment"
-        android:shortcutLongLabel="@string/shortcut_long_label"
-        android:shortcutShortLabel="@string/shortcut_short_label">
+        android:shortcutLongLabel="@string/shortcut_dash_long_label"
+        android:shortcutShortLabel="@string/shortcut_dash_short_label">
         <intent
             android:action="android.intent.action.VIEW"
             android:data="sy://main/dash" />
     </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_notifications_blue"
+        android:shortcutDisabledMessage="@string/shortcut_notify_disable"
+        android:shortcutId="NotificationFragment"
+        android:shortcutLongLabel="@string/shortcut_notify_long_label"
+        android:shortcutShortLabel="@string/shortcut_notify_short_label">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="sy://main/notify" />
+    </shortcut>
+
 </shortcuts>

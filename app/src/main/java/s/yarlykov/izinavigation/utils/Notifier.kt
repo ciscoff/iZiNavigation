@@ -4,17 +4,19 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import s.yarlykov.izinavigation.R
+import javax.inject.Inject
 
 /**
  * Utility class for posting notifications.
  * This class creates the notification channel (as necessary) and posts to it when requested.
  */
-class Notifier(context: Context) {
+class Notifier @Inject constructor(var context: Context) {
 
     companion object {
         private const val channelId = "Default"
@@ -35,14 +37,12 @@ class Notifier(context: Context) {
                 notificationManager.createNotificationChannel(mChannel)
             }
         }
-
     }
 
     fun postNotification(id: Long, context: Context, intent: PendingIntent) {
         val builder = NotificationCompat.Builder(context, channelId)
         builder.setContentTitle(context.getString(R.string.deepLink_notification_title))
-
-            .setSmallIcon(R.drawable.ic_dashboard)
+            .setSmallIcon(R.drawable.ic_dashboard_blue)
         val text = context.getString(R.string.show_more_dashboards)
 
         val notification = builder.setContentText(text)

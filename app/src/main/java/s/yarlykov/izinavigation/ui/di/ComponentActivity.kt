@@ -1,6 +1,7 @@
 package s.yarlykov.izinavigation.ui.di
 
 import dagger.Subcomponent
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import s.yarlykov.izinavigation.MainActivity
 import s.yarlykov.izinavigation.ui.fragments.FragmentDashboard
 import s.yarlykov.izinavigation.ui.fragments.FragmentHome
@@ -11,6 +12,7 @@ import s.yarlykov.lib.smartadapter.model.SmartList
 
 @ScopeActivity
 @Subcomponent(modules = [ModuleActivity::class])
+@ExperimentalCoroutinesApi
 interface ComponentActivity {
 
     @Subcomponent.Factory

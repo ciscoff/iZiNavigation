@@ -3,7 +3,9 @@ package s.yarlykov.izinavigation.app.di
 import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import s.yarlykov.izinavigation.ui.di.ComponentActivity
+import s.yarlykov.izinavigation.utils.Notifier
 import s.yarlykov.media.di.ComponentRepo
 import s.yarlykov.media.di.ModuleRepo
 import javax.inject.Singleton
@@ -53,6 +55,8 @@ interface AppComponent {
         fun build(): AppComponent
     }
 
+    @ExperimentalCoroutinesApi
     var mainActivityComponentFactory: ComponentActivity.Factory
 
+    val notifier: Notifier
 }
