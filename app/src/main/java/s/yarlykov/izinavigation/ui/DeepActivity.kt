@@ -14,11 +14,11 @@ import s.yarlykov.izinavigation.R
  * Тестирование через adb:
  *
  * cd /d C:\Users\syarlykov\AppData\Local\Android\Sdk\platform-tools
- * adb shell am start -W -a android.intent.action.VIEW -d "sy://gizmos" s.yarlykov.izinavigation
+ * adb shell am start -W -a android.intent.action.VIEW -d "https://gizmos.forever" s.yarlykov.izinavigation
  *
  *  или так, без пакета
  *
- * adb shell am start -W -a android.intent.action.VIEW -d "sy://gizmos"
+ * adb shell am start -W -a android.intent.action.VIEW -d "https://gizmos.forever"
  */
 
 class DeepActivity : AppCompatActivity() {

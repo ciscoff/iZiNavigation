@@ -18,8 +18,8 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="gizmo"
-                    android:scheme="sy" />
+                    android:host="gizmos.forever"
+                    android:scheme="https" />
             </intent-filter>
         </activity>
         <activity

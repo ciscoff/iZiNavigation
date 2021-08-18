@@ -12,6 +12,7 @@
     <string name="see_more_icons">See more icons</string>
     <string name="see_more_dashboards">See more dashboards</string>
     <string name="see_more_notify">See more notifications</string>
+    <string name="see_more_activities">See more activities</string>
 
     <!-- Shortcuts -->
     <string name="shortcut_home_disable">Home disable</string>
@@ -29,5 +30,8 @@
     <string name="chip_choice_home">Home</string>
     <string name="chip_choice_dash">Dashboard</string>
     <string name="chip_choice_notify">Notification</string>
+    <string name="chip_choice_activity">Activity</string>
+
+    <string name="deep_text">Hello ! You are inside a deep activity</string>
 
 </resources>
